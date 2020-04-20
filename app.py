@@ -13,9 +13,17 @@ class instagram_bot:
             .send_keys(pw)
         self.driver.find_element_by_xpath('//button[@type="submit"]')\
             .click()
-        sleep(4)
+        sleep(3)
         self.driver.find_element_by_xpath("//button[contains(text(), 'Not Now')]")\
             .click()
-        sleep(2)
+        sleep(1)
+        top_ten = ["instagram", "cristiano", "arianagrande","therock", "selenagomez","kyliejenner","kimkardashian","leomessi","beyonce","neymarjr"]
+        for i in top_ten:
+            self.driver.get("http://instagram.com/" + i)
+            sleep(1)
+            self.driver.find_element_by_xpath("//button[contains(text(), 'Follow')]")\
+                .click()
+            sleep(1)
+            
 
-instagram_bot(usr,pw)
+bot = instagram_bot(usr,pw)
