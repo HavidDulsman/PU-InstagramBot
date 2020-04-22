@@ -1,4 +1,1 @@
-# PU-InstagramBot
-Instagram bot made for Personal Use
-
-First push :)
+# Instagram Liking Bot - Made for Personal Use
