@@ -1,1 +1,2 @@
-# Instagram Liking Bot - Made for Personal Use
+# Instagram Bot - Made for Personal Use
+
