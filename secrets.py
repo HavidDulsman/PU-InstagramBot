@@ -1,2 +1,0 @@
-usr = "followrcheckr"
-pw = "supersecretpasswrd"
