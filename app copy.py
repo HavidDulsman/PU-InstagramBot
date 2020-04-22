@@ -1,6 +1,6 @@
 from time import sleep
 from selenium import webdriver
-from secrets import usr, pw, text
+from secrets import usr, pw
 
 class instagram_bot:
     def __init__(self, username, pw):
@@ -21,17 +21,11 @@ class instagram_bot:
         for i in top_ten:
             self.driver.get("http://instagram.com/" + i)
             sleep(1)
-            # self.driver.find_element_by_xpath("//button[contains(text(), 'Follow')]")\
-            #     .click()
+            self.driver.find_element_by_xpath("//button[contains(text(), 'Follow')]")\
+                .click()
             self.driver.find_element_by_class_name('eLAPa')\
                 .click()
-            sleep(2)
-            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]/button")\
-                .click()
-            sleep(5)
-            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[2]/button")\
-                .click()\
-            
             sleep(1)
             
+
 bot = instagram_bot(usr,pw)
