@@ -25,13 +25,9 @@ class instagram_bot:
             #     .click()
             self.driver.find_element_by_class_name('eLAPa')\
                 .click()
-            sleep(2)
+            sleep(1)
             self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]/button")\
                 .click()
-            sleep(5)
-            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[2]/button")\
-                .click()\
-            
             sleep(1)
             
 bot = instagram_bot(usr,pw)
