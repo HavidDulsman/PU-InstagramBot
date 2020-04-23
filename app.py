@@ -17,6 +17,16 @@ class instagram_bot:
         self.driver.find_element_by_xpath("//button[contains(text(), 'Not Now')]")\
             .click()
         sleep(1)
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[2]/div[2]/div/div/div/div[1]/div[3]/button")\
+            .click()
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[2]/div[2]/div/div/div/div[2]/div[3]/button")\
+            .click()
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[2]/div[2]/div/div/div/div[3]/div[3]/button")\
+            .click()
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[2]/div[2]/div/div/div/div[4]/div[3]/button")\
+            .click()
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[2]/div[2]/div/div/div/div[5]/div[3]/button")\
+            .click()
         top_ten = ["instagram", "cristiano", "arianagrande","therock", "selenagomez","kyliejenner","kimkardashian","leomessi","beyonce","neymarjr"]
         for i in top_ten:
             self.driver.get("http://instagram.com/" + i)
@@ -26,8 +36,12 @@ class instagram_bot:
             self.driver.find_element_by_class_name('eLAPa')\
                 .click()
             sleep(1)
-            self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]/button")\
-                .click()
-            sleep(1)
+            for i in range(2):
+                self.driver.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[2]/section[1]/span[1]/button")\
+                    .click()
+                sleep(2)
+                self.driver.find_element_by_xpath("//a[contains(text(), 'Next')]")\
+                    .click()
+                sleep(2)
             
 bot = instagram_bot(usr,pw)
